@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: "spring-jms"
+
+app:
+  jms-queues:
+    email: "mailbox"
+
