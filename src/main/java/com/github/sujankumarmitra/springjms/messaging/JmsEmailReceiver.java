@@ -11,7 +11,7 @@ public class JmsEmailReceiver implements EmailReceiver {
     private static final Logger LOGGER = LoggerFactory.getLogger(JmsEmailReceiver.class);
 
     @Override
-    @JmsListener(destination = "mailbox")
+    @JmsListener(destination = JmsEmailQueue.QUEUE_NAME)
     public void onReceive(Email email) {
         LOGGER.info("Received Email:: {}", email);
     }

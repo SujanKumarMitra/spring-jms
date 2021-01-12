@@ -21,7 +21,7 @@ public class JmsEmailSender implements EmailSender {
     @Override
     public void sendEmail(Email email) {
         LOGGER.info("Sending email:: {}", email);
-        jmsTemplate.convertAndSend("mailbox", email);
+        jmsTemplate.convertAndSend(JmsEmailQueue.QUEUE_NAME, email);
     }
 
 }
